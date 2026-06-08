@@ -5,6 +5,12 @@ module gray_to_bin #(
     output logic [WIDTH-1:0] bin
 );
 
-  // YOU CODE HERE
+
+  always_comb begin
+    bin[WIDTH-1] = gray[WIDTH-1];
+    for (int i = WIDTH-2; i >= 0; i--) begin
+      bin[i] = bin[i+1] ^ gray[i];
+    end
+  end
 
 endmodule

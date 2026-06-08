@@ -2,7 +2,7 @@ module test;
 
   initial
   begin
-    $display("Hello, World!");
+    $display("Hi,Sabbir");
     $finish;
   end
 

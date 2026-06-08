@@ -1,13 +1,17 @@
-build: 
+build:
 	@mkdir -p build
-	@echo "*" > build/.gitignore
-.PHONY: all
-all:
-	@make -s clean
+	@echo "*" > build/.gitingnore
+.PHONY: aa
+aa:
+	@make -s clear
 	@make -s build
 	@cd build && xvlog -sv ../test.sv
-	@cd build && xelab test -s short_name
-	@cd build && xsim short_name -runall	
-:PHONY: clean
-clean:
-	@rm -rf build
+	@cd build && xelab test -s abc
+	@cd build && xsim abc -runall
+.PHONY: clear
+clear:
+	rm -rf build
+
+
+
+
