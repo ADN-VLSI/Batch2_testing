@@ -6,7 +6,3 @@ msg.txt:
 	@echo "Hello, World!" > msg.txt
 	@echo "Created msg.txt with a greeting message"
 
-.PHONY: clean
-clean:
-	@rm -f msg.txt output.txt
-	@echo "Cleaned up generated files"
