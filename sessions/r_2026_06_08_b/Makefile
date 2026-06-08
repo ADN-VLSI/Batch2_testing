@@ -1,5 +1,6 @@
 build:
 	@mkdir -p build
+	@echo "*" > build/.gitignore
 
 .PHONY: all
 all:
