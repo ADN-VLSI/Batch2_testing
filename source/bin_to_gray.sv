@@ -6,7 +6,9 @@ module bin_to_gray #(
 );
 
   // YOU CODE HERE
-
+always_comb begin
+gray = bin ^ (bin >> 1); 
+end
 
 
 endmodule
