@@ -7,4 +7,6 @@ module bin_to_gray #(
 
   // YOU CODE HERE
 
+
+
 endmodule
