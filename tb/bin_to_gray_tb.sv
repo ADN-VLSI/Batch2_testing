@@ -17,7 +17,7 @@ module bin_to_gray_tb;
     $dumpfile("bin_to_gray_tb.vcd");
     $dumpvars(0, bin_to_gray_tb);
 
-    $display("Simulation Started for Khalid's testbench bin_to_gray...");
+    $display("Starting Simulation for Khalid's testbench bin_to_gray...");
 
     repeat (10000) begin
       bin = $random;
