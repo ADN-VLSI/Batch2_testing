@@ -12,6 +12,20 @@ module bin_to_gray_tb;
       .gray(gray)
   );
 
-  // YOU CODE HERE
+  initial begin
+
+    $display("Simulation started for Khalid's testbench bin_to_gray...");
+    
+    repeat (10000) begin
+      bin = $random;
+      #10;
+
+      if (gray === (bin ^ (bin >> 1))) $display("PASS: bin=%b, gray=%b", bin, gray);
+      else $display("FAIL: bin=%b, gray=%b", bin, gray);
+    end
+
+    $display("Simulation finished successfully.");
+    $finish;
+  end
 
 endmodule
