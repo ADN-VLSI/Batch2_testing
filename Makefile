@@ -36,5 +36,5 @@ sim:
 	@make -s $(LOG_DIR)
 	@echo -e "\033[1;33mStarting simulation for top-level module:\033[0m $(TOP)"
 	@cd $(BUILD_DIR) && xvlog -sv $(FILES) -log $(LOG_DIR)/xvlog_$(shell date +%Y%m%d_%H%M%S).log $(EWLH)
-	@cd $(BUILD_DIR) && xelab $(TOP) -s snap_$(TOP) -log $(LOG_DIR)/xelab_$(TOP)_$(shell date +%Y%m%d_%H%M%S).log $(EWLH)
+	@cd $(BUILD_DIR) && xelab $(TOP) -debug all -s snap_$(TOP) -log $(LOG_DIR)/xelab_$(TOP)_$(shell date +%Y%m%d_%H%M%S).log $(EWLH)
 	@cd $(BUILD_DIR) && xsim snap_$(TOP) -runall -log $(LOG_DIR)/xsim_$(TOP)_$(shell date +%Y%m%d_%H%M%S).log $(EWLH)
