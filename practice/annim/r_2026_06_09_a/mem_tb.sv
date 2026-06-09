@@ -19,5 +19,14 @@ module mem_tb #(
         .DATA_WIDTH (DATA_WIDTH)  
     )
     dut (
-        .clk_i
-    )
+        .clk_i(clk_i),
+        .we_i(we_i),
+        .waddr_i(waddr_i),
+        .wdata_i(wdata_i),
+        .raddr_i(raddr_i),
+        .rdata_o(rdata_o)
+    );
+
+    initial begin
+        
+    end
