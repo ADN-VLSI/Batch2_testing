@@ -1,3 +1,6 @@
+//Module Name: bin_to_gray_tb
+//Module Description: This is a testbench for the bin_to_gray module. It generates random binary inputs and checks if the output gray code is correct.
+
 module bin_to_gray_tb;
 
   parameter WIDTH = 8;
