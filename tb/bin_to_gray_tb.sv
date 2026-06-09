@@ -17,17 +17,17 @@ module bin_to_gray_tb;
     $dumpfile("bin_to_gray_tb.vcd");
     $dumpvars(0, bin_to_gray_tb);
 
-    $display("Simulation started for Khalid's testbench bin_to_gray...");
+    $display("Simulation Started for Khalid's testbench bin_to_gray...");
 
     repeat (10000) begin
       bin = $random;
       #10;
  
-      if (gray === (bin ^ (bin >> 1))) $display("PASS: bin=%b, gray=%b", bin, gray);
-      else $display("FAIL: bin=%b, gray=%b", bin, gray);
+      if (gray === (bin ^ (bin >> 1))) $display("Check: PASS! | Expected Values: bin=%b, gray=%b | Got Values: bin=%b, gray=%b", bin, gray, bin, gray);
+      else $display("Check: FAIL! | Expected Values: bin=%b, gray=%b | Got Values: bin=%b, gray=%b", bin, (bin ^ (bin >> 1)), bin, gray);
     end
 
-    $display("Simulation finished successfully.");
+    $display("Simulation Finished Successfully.");
     $finish;
   end
 
