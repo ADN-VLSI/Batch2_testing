@@ -14,12 +14,15 @@ module bin_to_gray_tb;
 
   initial begin
 
+    $dumpfile("bin_to_gray_tb.vcd");
+    $dumpvars(0, bin_to_gray_tb);
+
     $display("Simulation started for Khalid's testbench bin_to_gray...");
-    
+
     repeat (10000) begin
       bin = $random;
       #10;
-
+ 
       if (gray === (bin ^ (bin >> 1))) $display("PASS: bin=%b, gray=%b", bin, gray);
       else $display("FAIL: bin=%b, gray=%b", bin, gray);
     end
