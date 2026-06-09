@@ -1,0 +1,17 @@
+//bin to gray logic is to keep the first bit as it is and the next bits come from doing XOR operation to the consecutive bits
+//
+
+module bin_to_gray #(
+    parameter WIDTH = 8
+) (
+    input  logic [WIDTH-1:0] bin,
+    output logic [WIDTH-1:0] gray
+);
+
+  // YOU CODE HERE
+
+always_comb begin
+gray = bin ^ (bin >> 1); // shifts the binary 8 bit number 1 bit to the right with a 0 in the MSB and does bitwise XOR 
+end
+
+endmodule
