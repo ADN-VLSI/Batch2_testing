@@ -10,6 +10,7 @@ LOG_DIR   := $(ROOT_DIR)/log
 
 FILES += $(shell find $(ROOT_DIR)/source -name "*.sv")
 FILES += $(shell find $(ROOT_DIR)/tb -name "*.sv")
+FILES += $(shell find $(ROOT_DIR)/practice/khalid/r_2026_06_10_a -name "*.sv")
 
 EWLH := | grep -iE "error:|warning:|" --color=auto
 
