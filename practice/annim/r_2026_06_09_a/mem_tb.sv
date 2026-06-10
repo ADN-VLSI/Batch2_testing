@@ -28,5 +28,39 @@ module mem_tb #(
     );
 
     initial begin
-        
-    end
+
+        // initial value set
+        we_i    = 0;
+        waddr_i = 0;
+        wdata_i = 0;
+        raddr_i = 0;
+
+        // clock set with time period 20
+        clk_i = 0;
+        #20 clk_i = ~ clk_i;
+
+        //write 1010 in memory addr 00
+        we_i = 1;
+        waddr_i = 2'b00;
+        wdata_i = 4'b1010;
+
+        //write 0101 in memory addr 10
+        we_i = 1;
+        waddr_i = 2'b10;
+        wdata_i = 4'b0101;
+
+        //read data from memory addr 00
+        we_i = 0;
+        raddr_i = 2'b00;
+        display("In address = %b, data available = %b",raddr_i,rdata_o);
+
+        //read data from memory addr 10
+        we_i = 0;
+        raddr_i = 2'b10;
+        display("In address = %b, available data = %b",raddr_i, rdata_o);
+
+
+      end
+endmodule
+
+
