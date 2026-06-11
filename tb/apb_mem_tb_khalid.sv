@@ -1,6 +1,5 @@
 module apb_mem_tb_khalid;
 
-
   localparam int ADDR_WIDTH = 8;
   localparam int DATA_WIDTH = 32;
   localparam int STRB_WIDTH = DATA_WIDTH / 8;
@@ -141,16 +140,31 @@ task automatic apb_read(
     arst_n   = 1;
     #10ns;
 
+
     $display("--- Starting APB Memory Tests ---");
 
-
-    $display("\nLaunching %0d Random Writes...", NUM_TESTS);
     repeat (NUM_TESTS) begin
-      logic [ADDR_WIDTH-1:0] rand_addr;
-      rand_addr = $urandom_range(0, 63) * 4; 
-      
-      used_addresses.push_back(rand_addr);
-      apb_write(.addr(rand_addr), .data($urandom));
+      int addr;
+      addr = $urandom;
+      used_addresses.push_back(addr);
+      apb_write(addr, $urandom);
+    end
+
+
+    repeat (NUM_TESTS) begin
+      int output_var;
+      int addr;
+      randcase
+        1: addr = $urandom;
+        9: addr = used_addresses[$urandom_range(0, used_addresses.size()-1)];
+      endcase
+      apb_read(.addr(addr), .data(output_var));
+    end
+
+    if (fail_count == 0) begin
+      $display("\033[1;32mAll %0d tests passed!\033[0m", pass_count);
+    end else begin
+      $display("\033[1;31m%0d tests failed out of %0d\033[0m", fail_count, pass_count + fail_count);
     end
 
     #1us;
