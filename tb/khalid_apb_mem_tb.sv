@@ -1,4 +1,4 @@
-module apb_mem_tb_khalid;
+module khalid_apb_mem_tb;
 
 
   localparam int ADDR_WIDTH = 8;
@@ -126,8 +126,8 @@ task automatic apb_read(
   initial begin
     
     $timeformat(-9, 0, "ns");
-    $dumpfile("apb_mem_tb_khalid.vcd");
-    $dumpvars(0, apb_mem_tb_khalid);
+    $dumpfile("khalid_apb_mem_tb.vcd");
+    $dumpvars(0, khalid_apb_mem_tb);
 
     psel    = 0;
     penable = 0;

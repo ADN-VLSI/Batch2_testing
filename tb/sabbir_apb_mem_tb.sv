@@ -1,4 +1,4 @@
-module apb_mem_tb;
+module sabbir_apb_mem_tb;
 
   localparam int ADDR_WIDTH = 8;
   localparam int DATA_WIDTH = 32;
@@ -119,8 +119,8 @@ module apb_mem_tb;
 
   initial begin
     $timeformat(-9, 0, "ns");
-    $dumpfile("apb_mem_tb.vcd");
-    $dumpvars(0, apb_mem_tb);
+    $dumpfile("sabbir_apb_mem_tb.vcd");
+    $dumpvars(0, sabbir_apb_mem_tb);
 
     // Reset
     arst_ni = 1'b0;
