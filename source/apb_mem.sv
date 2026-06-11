@@ -71,9 +71,9 @@ module apb_mem #(
 
       .clk_i  (clk_i),
       .we_i   (mwe),
-      .waddr_i(maddr >> $clog2(DATA_WIDTH / 8)),
+      .waddr_i(maddr[ADDR_WIDTH-1:$clog2(DATA_WIDTH / 8)]),
       .wdata_i(actual_wdata),
-      .raddr_i(maddr >> $clog2(DATA_WIDTH / 8)),
+      .raddr_i(maddr[ADDR_WIDTH-1:$clog2(DATA_WIDTH / 8)]),
       .rdata_o(mrdata)
   );
 

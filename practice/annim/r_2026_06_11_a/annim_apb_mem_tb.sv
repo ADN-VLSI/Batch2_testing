@@ -20,20 +20,20 @@ module apb_mem_tb;
 
   // DUT
   apb_mem #(
-    .ADDR_WIDTH(ADDR_WIDTH),
-    .DATA_WIDTH(DATA_WIDTH)
+      .ADDR_WIDTH(ADDR_WIDTH),
+      .DATA_WIDTH(DATA_WIDTH)
   ) dut (
-    .arst_ni(arst_ni),
-    .clk_i(clk_i),
-    .psel_i(psel_i),
-    .penable_i(penable_i),
-    .paddr_i(paddr_i),
-    .pwrite_i(pwrite_i),
-    .pwdata_i(pwdata_i),
-    .pstrb_i(pstrb_i),
-    .pready_o(pready_o),
-    .prdata_o(prdata_o),
-    .pslverr_o(pslverr_o)
+      .arst_ni(arst_ni),
+      .clk_i(clk_i),
+      .psel_i(psel_i),
+      .penable_i(penable_i),
+      .paddr_i(paddr_i),
+      .pwrite_i(pwrite_i),
+      .pwdata_i(pwdata_i),
+      .pstrb_i(pstrb_i),
+      .pready_o(pready_o),
+      .prdata_o(prdata_o),
+      .pslverr_o(pslverr_o)
   );
 
   // clock
@@ -48,28 +48,28 @@ module apb_mem_tb;
     paddr_i = 0;
     pwdata_i = 0;
     pstrb_i = '1;
+  end
 
 
   // ---------------- WRITE TASK ----------------
-  task apb_write(input [ADDR_WIDTH-1:0] addr,
-                 input [DATA_WIDTH-1:0] data);
+  task apb_write(input [ADDR_WIDTH-1:0] addr, input [DATA_WIDTH-1:0] data);
 
     @(posedge clk_i);
 
     // SETUP phase
-    psel_i   = 1;
+    psel_i = 1;
     penable_i = 0;
     pwrite_i = 1;
-    paddr_i  = addr;
+    paddr_i = addr;
     pwdata_i = data;
-    pstrb_i  = '1;
+    pstrb_i = '1;
 
     @(posedge clk_i);
 
     // ACCESS phase
     penable_i = 1;
 
-    wait(pready_o == 1);
+    wait (pready_o == 1);
 
     @(posedge clk_i);
 
@@ -77,9 +77,9 @@ module apb_mem_tb;
     psel_i = 0;
     penable_i = 0;
 
-
-  foreach (i) begin
-  if (pstrb_i[i])
-    mem_model[address][8*i +: 8] = pwdata_i[8*i +: 8];
-end
+    foreach (i) begin
+      if (pstrb_i[i]) mem_model[address][8*i+:8] = pwdata_i[8*i+:8];
+    end
   endtask
+
+endmodule

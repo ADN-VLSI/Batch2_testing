@@ -13,6 +13,11 @@ FILES += $(shell find $(ROOT_DIR)/tb -name "*.sv")
 
 EWLH := | grep -iE "error:|warning:|" --color=auto
 
+
+.PHONY: print
+print:
+	@echo "$(FILES)"
+
 .PHONY: clean
 clean:
 	@rm -rf $(BUILD_DIR)
