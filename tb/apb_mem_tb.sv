@@ -7,26 +7,25 @@ module apb_mem_tb;
 
   logic                  arst_n;
   logic                  clk = 0;
-  logic                  psel;
-  logic                  penable;
-  logic [ADDR_WIDTH-1:0] paddr;
-  logic                  pwrite;
-  logic [DATA_WIDTH-1:0] pwdata;
-  logic [STRB_WIDTH-1:0] pstrb;
 
-  logic                  pready;
-  logic [DATA_WIDTH-1:0] prdata;
-  logic                  pslverr;
   bit                    edge_aligned;
   logic [DATA_WIDTH-1:0] read_back_data;
 
   int                    NUM_TESTS = 10;
-  int                    DEBUG = 1;
+  int                    DEBUG = 0;
   int                    pass_count;
   int                    fail_count;
   logic [ADDR_WIDTH-1:0] used_addresses [            $];
 
   logic [DATA_WIDTH-1:0] mem_array      [2**ADDR_WIDTH];
+
+  apb_if #(
+      .ADDR_WIDTH(ADDR_WIDTH),
+      .DATA_WIDTH(DATA_WIDTH)
+  ) u_apb_intf (
+      .arst_ni(arst_n),
+      .clk_i  (clk)
+  );
 
   apb_mem #(
       .ADDR_WIDTH(ADDR_WIDTH),
@@ -34,15 +33,15 @@ module apb_mem_tb;
   ) u_dut (
       .arst_ni  (arst_n),
       .clk_i    (clk),
-      .psel_i   (psel),
-      .penable_i(penable),
-      .paddr_i  (paddr),
-      .pwrite_i (pwrite),
-      .pwdata_i (pwdata),
-      .pstrb_i  (pstrb),
-      .pready_o (pready),
-      .prdata_o (prdata),
-      .pslverr_o(pslverr)
+      .psel_i   (u_apb_intf.psel),
+      .penable_i(u_apb_intf.penable),
+      .paddr_i  (u_apb_intf.paddr),
+      .pwrite_i (u_apb_intf.pwrite),
+      .pwdata_i (u_apb_intf.pwdata),
+      .pstrb_i  (u_apb_intf.pstrb),
+      .pready_o (u_apb_intf.pready),
+      .prdata_o (u_apb_intf.prdata),
+      .pslverr_o(u_apb_intf.pslverr)
   );
 
 
@@ -57,46 +56,19 @@ module apb_mem_tb;
   // APB Write Task
   task automatic apb_write(input logic [ADDR_WIDTH-1:0] addr, input logic [DATA_WIDTH-1:0] data,
                            input logic [STRB_WIDTH-1:0] strb = '1);
-    wait (edge_aligned);
 
-    psel    <= 1'b1;
-    penable <= 1'b0;
-    paddr   <= addr;
-    pwrite  <= 1'b1;
-    pwdata  <= data;
-    pstrb   <= strb;
-
-    @(posedge clk);
-    penable <= 1'b1;
-
-    do begin
-      @(posedge clk);
-    end while (!pready);
-
-    if (pslverr == 0) mem_array[addr] = data;
-
-    psel <= 1'b0;
-
+    int slverr;
+    u_apb_intf.master_write(addr, data, strb, slverr);
+    if (slverr == 0) mem_array[addr] = data;
   endtask
 
   //APB Read Task
   task automatic apb_read(input logic [ADDR_WIDTH-1:0] addr, output logic [DATA_WIDTH-1:0] data);
-    wait (edge_aligned);
-    psel    <= 1'b1;
-    penable <= 1'b0;
-    paddr   <= addr;
-    pwrite  <= 1'b0;
 
-    @(posedge clk);
-    penable <= 1'b1;
+    int slverr;
+    u_apb_intf.master_read(addr, data, slverr);
 
-    do begin
-      @(posedge clk);
-    end while (!pready);
-
-    data = prdata;
-
-    if (pslverr == 0) begin
+    if (slverr == 0) begin
       if (data !== mem_array[addr]) begin
         $display("[%0t] ERROR: Read data mismatch at address %h. Expected: %h, Got: %h", $realtime,
                  addr, mem_array[addr], data);
@@ -109,9 +81,24 @@ module apb_mem_tb;
       end
     end
 
-    psel <= 1'b0;
-
   endtask
+
+  initial begin
+    #15ns;
+    forever begin
+      logic [ADDR_WIDTH-1:0] addr;
+      logic                  write;
+      logic [DATA_WIDTH-1:0] wdata;
+      logic [STRB_WIDTH-1:0] strb;
+      logic [DATA_WIDTH-1:0] rdata;
+      logic                  slverr;
+
+      u_apb_intf.monitor_tx(addr, write, wdata, strb, rdata, slverr);
+      $display(
+          "[%0t] APB Transaction - Addr: %h, Write: %b, WData: %h, Strb: %b, RData: %h, SlvErr: %b",
+          $realtime, addr, write, wdata, strb, rdata, slverr);
+    end
+  end
 
   initial begin
 
@@ -119,13 +106,10 @@ module apb_mem_tb;
     $dumpfile("apb_mem_tb.vcd");
     $dumpvars(0, apb_mem_tb);
 
-    psel    <= '0;
-    penable <= '0;
-    paddr   <= '0;
-    pwrite  <= '0;
-    pwdata  <= '0;
-    pstrb   <= '0;
-    arst_n  <= '0;
+    arst_n <= '0;
+    clk    <= '0;
+    u_apb_intf.master_reset();
+
     #5ns;
 
     arst_n <= '1;

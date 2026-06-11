@@ -8,6 +8,7 @@ ROOT_DIR  := $(CURDIR)
 BUILD_DIR := $(ROOT_DIR)/build
 LOG_DIR   := $(ROOT_DIR)/log
 
+FILES += $(shell find $(ROOT_DIR)/interface -name "*.sv")
 FILES += $(shell find $(ROOT_DIR)/source -name "*.sv")
 FILES += $(shell find $(ROOT_DIR)/tb -name "*.sv")
 
