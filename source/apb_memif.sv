@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 // APB Memory Interface Module
 // This module acts as a bridge between the APB bus and a memory interface.
 // It translates APB transactions into memory requests and handles responses.

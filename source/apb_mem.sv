@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module apb_mem #(
     // Parameters for address and data widths
     parameter int ADDR_WIDTH = 8,

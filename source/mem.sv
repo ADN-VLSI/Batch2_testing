@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 module mem #(
     parameter int ADDR_WIDTH = 2,
     parameter int DATA_WIDTH = 4
