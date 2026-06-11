@@ -18,7 +18,7 @@ module khalid_array_tb;
     initial begin
 
         $display("\n==================================================");
-        $display("   STARTING SYSTEMVERILOG ARRAY MATRIX CHECK      ");
+        $display("   STARTING SYSTEMVERILOG ARRAY MATRIX CHECK BY KHALID    ");
         $display("==================================================");
 
         tb_packed_in = 32'hDE_AD_BE_EF;
