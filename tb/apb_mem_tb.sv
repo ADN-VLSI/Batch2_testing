@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 module apb_mem_tb;
 
   localparam int ADDR_WIDTH = 8;
