@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <style>
+    .title { font: bold 20px sans-serif; }
+    .block { fill: #f2f2f2; stroke: #333; stroke-width: 2; }
+    .subblock { fill: #ffffff; stroke: #666; stroke-width: 1.5; }
+    .text { font: 14px sans-serif; }
+    .label { font: bold 12px sans-serif; fill: #222; }
+    .arrow { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <text x="50" y="40" class="title">APB CDC FIFO Project - Top-Level Architecture</text>
+
+  <rect x="80" y="100" width="220" height="140" class="block" rx="12" ry="12" />
+  <text x="190" y="135" text-anchor="middle" class="text">APB Master</text>
+  <text x="190" y="160" text-anchor="middle" class="text">(`apb_master.sv`)</text>
+  <text x="190" y="185" text-anchor="middle" class="text">req_ready, resp_ready</text>
+
+  <rect x="300" y="90" width="400" height="220" class="block" rx="16" ry="16" />
+  <text x="500" y="125" text-anchor="middle" class="text">APB CDC Bridge</text>
+  <text x="500" y="145" text-anchor="middle" class="text">(`apb_cdc_bridge.sv`)</text>
+
+  <rect x="340" y="165" width="160" height="110" class="subblock" rx="10" ry="10" />
+  <text x="420" y="190" text-anchor="middle" class="text">Request FIFO</text>
+  <text x="420" y="210" text-anchor="middle" class="text">(master → slave)</text>
+
+  <rect x="500" y="165" width="160" height="110" class="subblock" rx="10" ry="10" />
+  <text x="580" y="190" text-anchor="middle" class="text">Response FIFO</text>
+  <text x="580" y="210" text-anchor="middle" class="text">(slave → master)</text>
+
+  <rect x="690" y="100" width="220" height="140" class="block" rx="12" ry="12" />
+  <text x="800" y="135" text-anchor="middle" class="text">APB Slave Memory</text>
+  <text x="800" y="160" text-anchor="middle" class="text">(`apb_slave_mem.sv`)</text>
+  <text x="800" y="185" text-anchor="middle" class="text">s_pready, prdata, pslverr</text>
+
+  <path d="M300 170 L340 170" class="arrow" />
+  <path d="M660 170 L690 170" class="arrow" />
+  <path d="M690 160 L690 134" class="arrow" />
+  <path d="M660 220 L690 220" class="arrow" />
+
+  <text x="250" y="240" class="label">m_clk</text>
+  <line x1="300" y1="240" x2="340" y2="240" stroke="#666" stroke-dasharray="5,4" />
+  <line x1="340" y1="245" x2="340" y2="315" stroke="#666" stroke-dasharray="5,4" />
+  <text x="380" y="260" class="label">s_clk</text>
+
+  <path class="arrow" d="M160 210 L140 210 L140 360 L760 360 L760 240" />
+  <text x="450" y="250" class="label">APB request packet</text>
+
+  <path class="arrow" d="M760 310 L840 310 L840 200" />
+  <text x="760" y="330" class="label">APB response packet</text>
+
+  <rect x="80" y="320" width="220" height="120" class="block" rx="12" ry="12" />
+  <text x="190" y="350" text-anchor="middle" class="text">Master Clock Domain</text>
+  <text x="190" y="370" text-anchor="middle" class="text">`master_clk`</text>
+
+  <rect x="690" y="320" width="220" height="120" class="block" rx="12" ry="12" />
+  <text x="800" y="350" text-anchor="middle" class="text">Slave Clock Domain</text>
+  <text x="800" y="370" text-anchor="middle" class="text">`slave_clk`</text>
+
+  <path d="M120 260 L120 310" class="arrow" />
+  <path d="M820 260 L820 310" class="arrow" />
+
+  <rect x="340" y="300" width="320" height="100" fill="none" stroke="#999" stroke-dasharray="6,4" rx="10" ry="10" />
+  <text x="500" y="315" text-anchor="middle" class="label">Asynchronous FIFO crossing</text>
+</svg>
