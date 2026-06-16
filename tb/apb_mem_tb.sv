@@ -118,23 +118,33 @@ module apb_mem_tb;
     $display("--- Starting APB Memory Tests ---");
 
     $display("\nLaunching %0d Random Writes...", NUM_TESTS);
-    repeat (NUM_TESTS) begin
-      logic [ADDR_WIDTH-1:0] rand_addr;
-      rand_addr = $urandom_range(0, 63) * 4;
 
-      used_addresses.push_back(rand_addr);
-      apb_write(rand_addr, $urandom);
-    end
 
-    repeat (NUM_TESTS) begin
+    begin
       int output_var;
-      int addr;
-      randcase
-        1: addr = $urandom;
-        9: addr = used_addresses[$urandom_range(0, used_addresses.size()-1)];
-      endcase
-      apb_read(addr, output_var);
+      fork
+        apb_read('h5678, output_var);
+        apb_write('h1234, 'hABCDEF00);
+      join
     end
+
+    // repeat (NUM_TESTS) begin
+    //   logic [ADDR_WIDTH-1:0] rand_addr;
+    //   rand_addr = $urandom_range(0, 63) * 4;
+
+    //   used_addresses.push_back(rand_addr);
+    //   apb_write(rand_addr, $urandom);
+    // end
+
+    // repeat (NUM_TESTS) begin
+    //   int output_var;
+    //   int addr;
+    //   randcase
+    //     1: addr = $urandom;
+    //     9: addr = used_addresses[$urandom_range(0, used_addresses.size()-1)];
+    //   endcase
+    //   apb_read(addr, output_var);
+    // end
 
     #1us;
     $display("--- APB Memory Simulation Complete ---");

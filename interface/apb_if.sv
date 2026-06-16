@@ -17,7 +17,57 @@ interface apb_if #(
   logic [      DATA_WIDTH-1:0] prdata;  // Peripheral read data
   logic                        pslverr;  // Peripheral slave error
 
-  bit                          edge_aligned;
+  modport master(
+      input arst_ni,
+      input clk_i,
+
+      output psel,
+      output penable,
+      output paddr,
+      output pwrite,
+      output pwdata,
+      output pstrb,
+
+      input pready,
+      input prdata,
+      input pslverr
+  );
+
+  modport slave(
+      input arst_ni,
+      input clk_i,
+
+      input psel,
+      input penable,
+      input paddr,
+      input pwrite,
+      input pwdata,
+      input pstrb,
+
+      output pready,
+      output prdata,
+      output pslverr
+  );
+
+  modport monitor(
+      input arst_ni,
+      input clk_i,
+
+      input psel,
+      input penable,
+      input paddr,
+      input pwrite,
+      input pwdata,
+      input pstrb,
+
+      input pready,
+      input prdata,
+      input pslverr
+  );
+
+  bit       edge_aligned;
+
+  semaphore bus_access = new(1);
 
   always @(posedge clk_i) begin
     edge_aligned = '1;
@@ -38,6 +88,8 @@ interface apb_if #(
   task automatic master_write(input logic [ADDR_WIDTH-1:0] addr, input logic [DATA_WIDTH-1:0] data,
                               input logic [DATA_WIDTH/8-1:0] strb = '1, output logic slverr);
 
+    bus_access.get(1);  // Acquire the bus semaphore for exclusive access
+
     wait (edge_aligned);
     psel    <= 1'b1;
     penable <= 1'b0;
@@ -57,11 +109,15 @@ interface apb_if #(
 
     psel <= 1'b0;
 
+    bus_access.put(1);  // Release the bus semaphore
+
   endtask
 
   //APB Read Task
   task automatic master_read(input logic [ADDR_WIDTH-1:0] addr, output logic [DATA_WIDTH-1:0] data,
                              output logic slverr);
+
+    bus_access.get(1);  // Acquire the bus semaphore for exclusive access
 
     wait (edge_aligned);
     psel    <= 1'b1;
@@ -80,6 +136,8 @@ interface apb_if #(
     slverr = pslverr;
 
     psel <= 1'b0;
+
+    bus_access.put(1);  // Release the bus semaphore
 
   endtask
 
