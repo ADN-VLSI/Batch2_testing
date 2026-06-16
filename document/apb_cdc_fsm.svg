@@ -1,0 +1,284 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" style="background: transparent; background-color: transparent;" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="520px" height="520px" viewBox="-0.5 -0.5 520 520" content="&lt;mxfile&gt;&lt;diagram id=&quot;7l9-R5TMkJW1XVt9zods&quot; name=&quot;Page-1&quot;&gt;7VrbbuIwEP2WPiC1D0i5tEAfgdKL1JVWoqt9rExsEqtOnHXMbb9+7cQOubIshNJ200pNcsaxZ86MM6eBjj321w8MhN43ChHpWAZcd+y7jmX1DUv8lcAmAW56dgK4DMMEMrfAFP9GCjQUusAQRbmBnFLCcZgHHRoEyOE5DDBGV/lhc0ryq4bARSVg6gBSRn9iyL0EHdwYW/wRYdfTK5uGsvhAD1ZA5AFIVxnInnTsMaOUJ2f+eoyI5E7zktx3X2NNHWMo4PvcYBnXyS1LQBYqOuUZ3+hwVx7maBoCR16vREY79sjjPhFXpjiNOKNvaEwJZQIJaCCGjcqOKN+WiHG0zkDKsQdEfcTZRgxZbTm90UR5GT5TEKg8uum921DFiYq2hqrb24rIe8CX0QWzSB4ukB/yTREt8YOgqA51SRn3qEsDQCZbdCTSHEqrKkhJ1IjRRQCR9MbYxSdEc7AgIvIRINgN5CSCUiRnkFRiUZVDZfAxhPFycxrwe+BjIvfX88LBEAiPxzSIaGpXu8o01XV5PQJmiIyA8+bGrpYHoAAO5W6SPhEQRdgRoLNgyzQqMeIeEx1YbU1EdMEcvbdu9Y4GzEV63G0vASXVO2uHIQI4XuY36nF1YlbVSUyA5C1XCr1fC6oN3ShmeCgGmP1wHcev7eLMlcenu+eJnkw4ksyXmDQM8bII1S7rJCmSSzJ3dhlvbhGgfPrEh6uCE8YcOPkZSsVSclk7EYUgqI99pbardCWgzAekMv6L6DWM4t5wkaEhmbqB5YxZWr3dDDdEDu5CwN4uO5Y9j38ShpaAXXa7LoqN6pbYIMaZlvy9KnKYuCniQAGYxYTtCqMmyQKuyHN96o/IW2PFc2h+rg2juhYYfEVBo6WglzpdHRgF1qSQkeO2x2raViiOtdhYjMPKp5aRPb0zzsBcRSEVyGhiIxU7NSFCI8oW+BdNk+ugj4gskey0zbXOeBrll5kIhEQH7uyTe2gnZb1WCmmTv8woK7NXoaxS8JiOaWm1m+mY8kHPEICbVjztEk95vZSTUnuKp16VeBqcSzxZhl0qhdpK+G/zfExq++fTxb3T6eLp5OXH94OF8blVbbGVHS9yD+7jrRhuKN2nU62fSKPtUK2tdmtMu9nWWcVb+f1fK9EalWj9qj5unq+P90/Xx4fj8WQ6/XKNvPS0+5enX9vkP12TL2ZY9fwPVgatHviaeqDwLieVB++kByo//ig+FtV/9O0HZe8pJAYf7IXA4HRC4ufw6aWVEa2M+NQyon1X0GqDE78rOKk4EJfbbybFtszXu+zJHw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <g>
+            <rect x="0" y="0" width="520" height="520" fill="#ffffff" stroke="none" pointer-events="all" style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212));"/>
+        </g>
+        <g>
+            <path d="M 200 120 L 313.63 120" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+            <path d="M 318.88 120 L 311.88 123.5 L 313.63 120 L 311.88 116.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 120px; margin-left: 260px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Lucida Console&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: nowrap; ">
+                                    !empty
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="260" y="123" fill="light-dark(#000000, #ffffff)" font-family="&quot;Lucida Console&quot;" font-size="11px" text-anchor="middle">
+                        !empty
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g style="filter: drop-shadow(light-dark(rgba(0, 0, 0, 0.25), rgba(237, 237, 237, 0.25)) 2px 3px 2px);">
+            <ellipse cx="120" cy="120" rx="80" ry="80" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 120px; margin-left: 41px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; font-weight: bold; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: normal; word-wrap: normal; ">
+                                    <font style="font-size: 17px;">
+                                        IDLE
+                                    </font>
+                                    <div>
+                                        <font face="Lucida Console" style="color: light-dark(rgb(204, 0, 0), rgb(255, 163, 163));">
+                                            <span style="font-weight: normal;">
+                                                !s_psel !
+                                            </span>
+                                            <span style="font-weight: normal; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                s_penable
+                                            </span>
+                                        </font>
+                                    </div>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <font style="color: light-dark(rgb(204, 0, 0), rgb(255, 163, 163));">
+                                                <span style="font-weight: 400;">
+                                                    !rd_en !
+                                                </span>
+                                                <span style="font-weight: 400; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183));">
+                                                    we_en
+                                                </span>
+                                            </font>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: 400; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                            </span>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="120" y="123" fill="light-dark(#000000, #ffffff)" font-family="&quot;Helvetica&quot;" font-size="11px" text-anchor="middle" font-weight="bold">
+                        IDLE...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <path d="M 400 200 L 400 313.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+            <path d="M 400 318.88 L 396.5 311.88 L 400 313.63 L 403.5 311.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 260px; margin-left: 400px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Lucida Console&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: nowrap; ">
+                                    !s_pready
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="400" y="263" fill="light-dark(#000000, #ffffff)" font-family="&quot;Lucida Console&quot;" font-size="11px" text-anchor="middle">
+                        !s_pready
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <path d="M 343.43 176.57 L 181.07 338.93" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+            <path d="M 177.36 342.64 L 179.83 335.22 L 181.07 338.93 L 184.78 340.17 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 260px; margin-left: 260px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Lucida Console&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: nowrap; ">
+                                    s_pready
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="260" y="263" fill="light-dark(#000000, #ffffff)" font-family="&quot;Lucida Console&quot;" font-size="11px" text-anchor="middle">
+                        s_pready
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g style="filter: drop-shadow(light-dark(rgba(0, 0, 0, 0.25), rgba(237, 237, 237, 0.25)) 2px 3px 2px);">
+            <ellipse cx="400" cy="120" rx="80" ry="80" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 120px; margin-left: 321px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; font-weight: bold; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: normal; word-wrap: normal; ">
+                                    <font style="font-size: 17px;">
+                                        SETUP
+                                    </font>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <span style="font-weight: normal;">
+                                                s_psel !
+                                            </span>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: normal; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                s_penable
+                                            </span>
+                                        </font>
+                                    </div>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <span style="font-weight: 400;">
+                                                !rd_en !
+                                            </span>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: 400; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                we_en
+                                            </span>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="400" y="123" fill="light-dark(#000000, #ffffff)" font-family="&quot;Helvetica&quot;" font-size="11px" text-anchor="middle" font-weight="bold">
+                        SETUP...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <path d="M 120 320 L 120 206.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+            <path d="M 120 201.12 L 123.5 208.12 L 120 206.37 L 116.5 208.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g style="filter: drop-shadow(light-dark(rgba(0, 0, 0, 0.25), rgba(237, 237, 237, 0.25)) 2px 3px 2px);">
+            <ellipse cx="120" cy="400" rx="80" ry="80" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 400px; margin-left: 41px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; font-weight: bold; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: normal; word-wrap: normal; ">
+                                    <font style="font-size: 17px;">
+                                        ACCESS
+                                    </font>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <span style="font-weight: normal;">
+                                                s_psel
+                                            </span>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: normal; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                s_penable
+                                            </span>
+                                        </font>
+                                    </div>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <span style="font-weight: 400;">
+                                                rd_en
+                                            </span>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: 400; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                we_en
+                                            </span>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="120" y="403" fill="light-dark(#000000, #ffffff)" font-family="&quot;Helvetica&quot;" font-size="11px" text-anchor="middle" font-weight="bold">
+                        ACCESS...
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g>
+            <path d="M 320 400 L 206.37 400" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+            <path d="M 201.12 400 L 208.12 396.5 L 206.37 400 L 208.12 403.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 400px; margin-left: 260px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Lucida Console&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: nowrap; ">
+                                    s_pready
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="260" y="403" fill="light-dark(#000000, #ffffff)" font-family="&quot;Lucida Console&quot;" font-size="11px" text-anchor="middle">
+                        s_pready
+                    </text>
+                </switch>
+            </g>
+        </g>
+        <g style="filter: drop-shadow(light-dark(rgba(0, 0, 0, 0.25), rgba(237, 237, 237, 0.25)) 2px 3px 2px);">
+            <ellipse cx="400" cy="400" rx="80" ry="80" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: light-dark(#ffffff, var(--ge-dark-color, #121212)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
+        </g>
+        <g>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 400px; margin-left: 321px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                <div style="display: inline-block; font-size: 11px; font-family: &quot;Helvetica&quot;; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; font-weight: bold; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); white-space: normal; word-wrap: normal; ">
+                                    <font style="font-size: 17px;">
+                                        WAIT
+                                    </font>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <span style="font-weight: normal;">
+                                                s_psel
+                                            </span>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: normal; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                s_penable
+                                            </span>
+                                        </font>
+                                    </div>
+                                    <div>
+                                        <font face="Lucida Console">
+                                            <span style="font-weight: 400;">
+                                                !rd_en !
+                                            </span>
+                                            <span style="color: light-dark(rgb(63, 63, 63), rgb(183, 183, 183)); font-weight: 400; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));">
+                                                we_en
+                                            </span>
+                                        </font>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="400" y="403" fill="light-dark(#000000, #ffffff)" font-family="&quot;Helvetica&quot;" font-size="11px" text-anchor="middle" font-weight="bold">
+                        WAIT...
+                    </text>
+                </switch>
+            </g>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.drawio.com/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
