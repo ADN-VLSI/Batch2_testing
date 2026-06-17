@@ -1,4 +1,4 @@
-module async_fifo_top #(
+module async_fifo #(
     parameter int DATA_WIDTH = 32,
     parameter int ADDR_WIDTH = 4
 ) (
