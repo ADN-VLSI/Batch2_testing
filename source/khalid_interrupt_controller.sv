@@ -36,17 +36,6 @@ module khalid_interrupt_controller #(
 
     //Read Operation
 
-    always_ff @(posedge clk_i or negedge arst_ni) begin
-        if (!arst_ni) begin
-            rdata_o <= '0;
-        end else if (!we_i) begin 
-            rdata_o <= '0;     
-            if (addr_i == 'h0)      rdata_o[7:0] <= core_0_src_en;
-            else if (addr_i == 'h4) rdata_o[7:0] <= core_1_src_en;
-        end
-    end
-
-
     always_comb
     rdata_o =  (addr_i == 'h0) ? core_0_src_en :
               ((addr_i == 'h4) ? core_1_src_en :
