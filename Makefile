@@ -8,8 +8,9 @@ ROOT_DIR  := $(CURDIR)
 BUILD_DIR := $(ROOT_DIR)/build
 LOG_DIR   := $(ROOT_DIR)/log
 
-FILES += -i $(ROOT_DIR)/submodule/axi/include
 FILES += -i $(ROOT_DIR)/include
+FILES += -i $(ROOT_DIR)/submodule/axi/include
+FILES += $(ROOT_DIR)/submodule/axi/src/axi_pkg.sv
 FILES += $(shell find $(ROOT_DIR)/interface -name "*.sv")
 FILES += $(shell find $(ROOT_DIR)/source -name "*.sv")
 FILES += $(shell find $(ROOT_DIR)/tb -name "*.sv")
