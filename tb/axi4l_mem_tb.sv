@@ -97,8 +97,21 @@ module axi4l_mem_tb;
   // KHALID
   //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  // SEND B
-  // RECV B
+  task automatic send_b(input logic [1:0] bresp = 2'b00);
+    wait (is_clk_aligned);
+    resp.b.resp  <= bresp;
+    resp.b_valid <= '1;
+    do @(posedge clk); while (req.b_ready !== '1);
+    resp.b_valid <= '0;
+  endtask
+
+  task automatic recv_b(output logic [1:0] bresp);
+    wait (is_clk_aligned);
+    req.b_ready <= '1;
+    do @(posedge clk); while (resp.b_valid !== '1);
+    bresp = resp.b.resp;
+    req.b_ready <= '0;
+  endtask
 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   // SABBIR
