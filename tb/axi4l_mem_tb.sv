@@ -104,9 +104,22 @@ module axi4l_mem_tb;
   // SABBIR
   //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  // SEND AR
-  // RECV AR
-
+  task automatic send_ar(input logic [AW-1:0] addr = '0, input logic [2:0] prot = '0);
+    wait (is_clk_aligned);
+    req.ar.addr  <= addr;
+    req.ar.prot  <= prot;
+    req.ar_valid <= '1;
+    do @(posedge clk); while (resp.ar_ready !== '1);
+    req.ar_valid <= '0;
+  endtask
+  task automatic recv_ar(output logic [AW-1:0] addr, output logic [2:0] prot);
+    wait (is_clk_aligned);
+    resp.ar_ready <= '1;
+    do @(posedge clk); while (req.ar_valid !== '1);
+    addr = req.ar.addr;
+    prot = req.ar.prot;
+    resp.ar_ready <= '0;
+  endtask 
   //////////////////////////////////////////////////////////////////////////////////////////////////
   // SHAWON
   //////////////////////////////////////////////////////////////////////////////////////////////////
