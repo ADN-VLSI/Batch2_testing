@@ -1,4 +1,4 @@
-# khalid_interrupt_controller
+# Interrupt Controller
 
 ## Overview
 
