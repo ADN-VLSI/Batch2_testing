@@ -1,12 +1,12 @@
 # khalid_interrupt_controller
 
-<p align="center">
-  <img src="document/khalid_interrupt_controller.svg" alt="Interupt Controller ARchitecture" width="120"/>
-</p>
-
 ## Overview
 
 A dual-core interrupt controller with 8 interrupt sources, configurable per-core enable masks, and priority-based interrupt ID generation.
+
+## Block Diagram
+
+![khalid_interrupt_controller](khalid_interrupt_controller.svg)
 
 ## Parameters
 
