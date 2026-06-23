@@ -8,12 +8,8 @@ Md-Sakib-Hasan-Shawon
 Sabbir939-coder
 jannatannim-cpu
 
-
-
-gh issue create -t "test the apb_mem.sv" -b "create the TB in tb folder and test it" -a "aukhalid"
-gh issue create -t "test the apb_mem.sv" -b "create the TB in tb folder and test it" -a "Md-Sakib-Hasan-Shawon"
-gh issue create -t "test the apb_mem.sv" -b "create the TB in tb folder and test it" -a "Sabbir939-coder"
-gh issue create -t "test the apb_mem.sv" -b "create the TB in tb folder and test it" -a "jannatannim-cpu"
-
-
+gh issue create -t "Implement B SEND & RECV"  -b "Add your code in the tb/axi4l_mem_tb.sv" -a "aukhalid"
+gh issue create -t "Implement R SEND & RECV"  -b "Add your code in the tb/axi4l_mem_tb.sv" -a "Md-Sakib-Hasan-Shawon"
+gh issue create -t "Implement AR SEND & RECV" -b "Add your code in the tb/axi4l_mem_tb.sv" -a "Sabbir939-coder"
+gh issue create -t "Implement W SEND & RECV"  -b "Add your code in the tb/axi4l_mem_tb.sv" -a "jannatannim-cpu"
 
