@@ -6,7 +6,7 @@ A dual-core interrupt controller with 8 interrupt sources, configurable per-core
 
 ## Block Diagram
 
-![khalid_interrupt_controller](khalid_interrupt_controller.svg)
+![khalid_interrupt_controller](khalid_interrupt_controlle.svg)
 
 ## Parameters
 
