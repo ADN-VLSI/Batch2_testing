@@ -114,6 +114,26 @@ module axi4l_mem_tb;
   // SEND R
   // RECV R
 
+  task automatic send_r(input logic [DW-1:0] data = '0, input logic [1:0] resp_stat = '0);
+    wait (is_clk_aligned);
+    req.r.data <= data;
+    req.r.resp <= resp_stat;
+    req.r.valid <= '1;
+    do @(posedge clk); while (resp.r_ready !== '1);
+    req.r_ready <= '0;
+  endtask
+
+    task automatic recv_r(output logic [DW-1:0] data = '0, output logic [1:0] resp_stat);
+    wait (is_clk_aligned);
+    req.r_ready <= '1;
+    do @(posedge clk); while (resp.r_valid !== '1);
+    data = req.r.data;
+    resp_stat = req.r.resp;
+    req.r_ready <= '0;
+  endtask
+
+
+
   //////////////////////////////////////////////////////////////////////////////////////////////////
   // Procedurals
   //////////////////////////////////////////////////////////////////////////////////////////////////
