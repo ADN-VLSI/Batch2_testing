@@ -9,6 +9,14 @@ Each PWM channel has its own duty cycle value stored in a register, and the outp
 
 ---
 
+## Diagram
+
+
+### Block Diagram
+
+![PWM Block Diagram](pwm.svg)
+
+
 ## Module Definition
 
 ```systemverilog
@@ -60,6 +68,8 @@ module pwm # (
   always_comb rd_data_o = register[addr_i];
 
   endmodule);
+  ```
+
 
 # PWM Module Documentation
 
@@ -75,13 +85,18 @@ module pwm # (
 
 ## Internal Signals
 
-| Signal     | Type        | Description |
-|------------|----------- |-------------|
-| `counter`  | 8-bit logic | Global PWM time base counter |
-| `register[]` | 8-bit array | Duty cycle storage for each PWM channel |
+| Signal      |  Type       |   Description                           |
+|-------------|-------------|-----------------------------------------|
+| `counter`   |-bit logic   | Global PWM time base counter            |
+| `register[]`| 8-bit array | Duty cycle storage for each PWM channel |
 
 ---
 
 ## Functional Blocks
 
-### 1. 8-bit Counter (Time Base)
+### 
+-8-bit Counter 
+-Individual signal input channels
+-An internal clock signal 
+
+
